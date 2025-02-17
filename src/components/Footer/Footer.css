@@ -1,0 +1,50 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con un poco de transparencia */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Para posicionar el logo de Discord */
+    border-top: 2px solid #00ff00; /* Borde verde en la parte superior */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Centra el cuadro */
+    margin-bottom: 20px; /* Espacio debajo del cuadro */
+}
+
+.footer-box {
+    background-color: rgba(46, 46, 46, 0.9); /* Fondo gris oscuro con transparencia */
+    color: #00ff00; /* Texto verde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    width: 200px; /* Ancho fijo para el cuadro */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+.discord-image {
+    width: 100%; /* Imagen ocupa todo el ancho del cuadro */
+    border-radius: 50%; /* Imagen redonda */
+}
+
+.discord-logo {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    position: absolute; /* Posiciona el logo de Discord */
+    bottom: 20px; /* Espacio desde el fondo */
+    left: 20px; /* Espacio desde la izquierda */
+    opacity: 0.8; /* Ajusta la opacidad para que sea más transparente */
+}
+
+.social-links {
+    margin-top: 10px; /* Espacio encima de los enlaces */
+}
+
+.social-links a {
+    margin: 0 5px; /* Espacio entre los logos */
+}
+
+.social-logo {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    opacity: 0.8; /* Ajusta la opacidad para que sea más transparente */
+}

@@ -1,0 +1,21 @@
+/* Asegúrate de que este CSS esté en tu archivo de estilos globales */
+.cart-page {
+  background-color: #1a1a1a; /* Fondo oscuro */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  padding: 20px; /* Espaciado interno */
+  color: #fff; /* Texto blanco */
+  display: flex; /* Usar flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.cart-container {
+  background-color: #000; /* Fondo negro para el contenedor */
+  border: 2px solid #fff; /* Borde blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+  text-align: center; /* Centra el texto */
+  width: 100%; /* Ancho completo */
+  max-width: 600px; /* Ancho máximo */
+}

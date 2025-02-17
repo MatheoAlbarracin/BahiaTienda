@@ -1,0 +1,65 @@
+/* Asegúrate de importar una fuente diferente en tu archivo HTML o CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.card-buttons {
+  display: flex; /* Usar flexbox para centrar los botones */
+  justify-content: center; /* Centrar los botones horizontalmente */
+  gap: 15px; /* Espacio entre los botones */
+  margin-top: 10px; /* Espacio superior para separar de otros elementos */
+}
+
+.card-buttons .btn-details {
+  font-family: 'Roboto', sans-serif; /* Cambia la fuente a Roboto */
+  color: green; /* Color del texto por defecto */
+  background-color: black; /* Color de fondo negro para el botón de detalles */
+  padding: 12px 20px; /* Espaciado interno para los botones */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave para el cambio de color y efecto de escala */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.card-buttons .btn-buy {
+  font-family: 'Roboto', sans-serif; /* Cambia la fuente a Roboto */
+  color: white; /* Color del texto por defecto */
+  background-color: green; /* Color de fondo verde para el botón de comprar */
+  padding: 12px 20px; /* Espaciado interno para los botones */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave para el cambio de color y efecto de escala */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  text-decoration: none; /* Elimina el subrayado */
+  display: inline-block; /* Asegúrate de que se comporte como un botón */
+}
+
+/* Asegúrate de que el Link no tenga estilos de enlace */
+.card-buttons .btn-buy a {
+  color: white; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.card-buttons .btn-details:hover {
+  background-color: green; /* Color de fondo al pasar el mouse para el botón de detalles */
+  color: black; /* Cambia el color del texto al pasar el mouse */
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.card-buttons .btn-buy:hover {
+  background-color: darkgreen; /* Color de fondo más oscuro al pasar el mouse para el botón de comprar */
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.confirmation-message {
+  position: fixed;
+  top: 20px; /* Ajusta según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50; /* Fondo verde */
+  color: black; /* Texto negro */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif; /* Cambia la fuente si lo deseas */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}

@@ -1,0 +1,132 @@
+.cart-dropdown {
+  position: fixed; /* Fija el menú en la pantalla */
+  top: 80px; /* Aumenta la distancia desde la parte superior */
+  right: 20px; /* Distancia desde la derecha */
+  background-color: #000; /* Fondo negro para el menú */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #fff; /* Borde blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+  display: none; /* Oculto por defecto */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  width: 300px; /* Ancho del menú */
+  max-height: 80vh; /* Altura máxima */
+  overflow-y: auto; /* Permite scroll si el contenido es demasiado */
+}
+
+.cart-dropdown.open {
+  display: block; /* Mostrar cuando está abierto */
+}
+
+.cart-dropdown h2 {
+  color: #4CAF50; /* Título en verde */
+}
+
+.cart-dropdown p {
+  margin: 10px 0; /* Espaciado entre párrafos */
+}
+
+.cart-dropdown button {
+  background-color: #4CAF50; /* Botones verdes */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.cart-dropdown button:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+.buy-button {
+  background-color: #4CAF50; /* Fondo verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.buy-button:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+.cart-container {
+    position: relative; /* Fija el carrito en la pantalla */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #000; /* Fondo negro para el contenedor */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    width: px; /* Ancho del carrito */
+    max-height: vh; /* Altura máxima */
+}
+
+.cart-items {
+    margin-bottom: 20px; /* Espacio debajo de los items */
+}
+
+.cart-item {
+    margin: 10px 0; /* Espacio entre los items */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ccc; /* Línea separadora entre items */
+}
+
+.cart-item button {
+    background-color: #ff4d4d; /* Fondo rojo para el botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.cart-item button:hover {
+    background-color: #ff1a1a; /* Color más oscuro al pasar el mouse */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Coloca los botones en columna */
+    align-items: center; /* Centra los botones */
+    margin-top: 20px; /* Espacio encima de los botones */
+}
+
+.buy-button, .clear-button, .back-button {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin: 5px 0; /* Espacio entre los botones */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.buy-button:hover, .clear-button:hover, .back-button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+.discord-logo {
+    width: 20px; /* Ajusta el tamaño del logo */
+    margin-right: 5px; /* Espacio entre el logo y el texto */
+}
+
+.clear-button {
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Espacio entre los botones */
+}

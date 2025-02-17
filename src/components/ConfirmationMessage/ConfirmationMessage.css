@@ -1,0 +1,12 @@
+.confirmation-message {
+  position: fixed;
+  top: 20px; /* Ajusta según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50; /* Fondo verde */
+  color: black; /* Texto negro */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif; /* Cambia la fuente si lo deseas */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+} 

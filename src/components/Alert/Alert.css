@@ -1,0 +1,41 @@
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 128, 0, 0.8); /* Fondo verde con opacidad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.alert-content {
+  background: #2e7d32; /* Fondo verde más oscuro */
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Centrar el texto */
+}
+
+.alert-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.alert-footer button {
+  background-color: #fff; /* Color de fondo blanco para los botones */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alert-footer button:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el mouse */
+}
