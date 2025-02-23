@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import discordLogo from '../../assets/Discord.png'; // Ruta al logo de Discord
 import './Cart.css'; // Asegúrate de tener este archivo CSS
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
@@ -29,14 +29,14 @@ const Cart = () => {
           ))}
           <p>Subtotal: ${total}</p>
           <div className="button-group">
-            <button className="buy-button" onClick={() => navigate('/process-buy')}>Comprar</button>
-            <button className="clear-button">Eliminar todo</button>
+            <button className="buy-button" onClick={() => window.open('https://discord.gg/8G2CpzX7uS', '_blank')}>Comprar</button>
+            <button className="clear-button" onClick={clearCart}>Eliminar todo</button>
             <button className="back-button" onClick={() => navigate('/')}>Volver al inicio</button>
           </div>
         </div>
       )}
-    </div>
+    </div>  
   );
 };
 
-export default Cart; 
+export default Cart;

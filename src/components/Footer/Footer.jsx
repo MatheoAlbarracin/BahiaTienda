@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <a href="https://discord.gg/tu-enlace" target="_blank" rel="noopener noreferrer" className="discord-link">
+            <a href="https://discord.gg/8G2CpzX7uS" target="_blank" rel="noopener noreferrer" className="discord-link">
                 <img src={discordLogo} alt="Discord Logo" className="discord-logo" />
             </a>
         </footer>

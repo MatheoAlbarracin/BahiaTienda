@@ -12,7 +12,7 @@ const products = [
       { label: 'Dinero Limpio IC (Inicial)', value: '$8,000,000' },
       { label: 'Vip Coins (Inicial)', value: '12000' },
       { label: 'Salario VIP (Cada 30 Min)', value: '$6,000,000' },
-      { label: 'VIP Coins (Cadaz 30 Min)', value: '325' },
+      { label: 'VIP Coins (Cada 30 Min)', value: '325' },
       { label: 'Capacidad de Inventario', value: '400kg' },
       { label: 'Concesionario VIP', value: '✔' },
       { label: 'Ammu-Nation VIP', value: '✔' },
@@ -28,24 +28,32 @@ const products = [
     id: 2,
     name: 'Vehículo 1',
     price: 200,
-    details: 'Características del Vehículo 1:\n- Velocidad máxima: 200 km/h\n- Capacidad: 4 personas\n- Color: Rojo',
+    details: [
+      { label: 'Velocidad máxima', value: '200 km/h' },
+      { label: 'Capacidad', value: '4 personas' },
+      { label: 'Color', value: 'Rojo' },
+    ],
     category: 'Vehículos',
   },
   {
     id: 3,
     name: 'Organización 1',
     price: 300,
-    details: 'Características de la Organización 1:\n- Acceso a eventos exclusivos\n- Beneficios en la tienda',
+    details: [
+      { label: 'Acceso', value: 'Eventos exclusivos' },
+      { label: 'Beneficios', value: 'Descuentos en la tienda' },
+    ],
     category: 'Organizaciones',
   },
   {
     id: 4,
     name: 'Extra 1',
     price: 50,
-    details: 'Características del Extra 1:\n- Beneficio adicional en el juego',
+    details: [
+      { label: 'Beneficio', value: 'Ventaja adicional en el juego' },
+    ],
     category: 'Extras',
   },
-  // Agrega más productos según sea necesario
 ];
 
 const ProductGrid = () => {
@@ -62,7 +70,7 @@ const ProductGrid = () => {
     setFilteredProducts(newFilteredProducts);
     
     // Mantener la posición del scroll
-    window.scrollTo(0, 0); // Esto asegura que el scroll se mantenga en la posición actual
+    window.scrollTo(0, 0);
   }, [selectedCategory]);
 
   return (

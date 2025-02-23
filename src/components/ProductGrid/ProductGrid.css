@@ -9,59 +9,182 @@
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff; /* Color de fondo */
-  color: white; /* Color del texto */
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .category-filters button:hover {
-  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  background-color: #0056b3;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 20px; /* Espacio entre los elementos */
-    padding: 20px;
-    justify-items: center; /* Centra los elementos en cada celda */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mejorar la visibilidad */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .product-card {
-    background-color: rgba(46, 46, 46, 0.9); /* Fondo gris oscuro */
-    color: #fff; /* Texto blanco */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+  background-color: rgba(46, 46, 46, 0.9);
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .discount {
-    color: red; /* Color para el descuento */
-    font-weight: bold; /* Negrita para el descuento */
+  color: red;
+  font-weight: bold;
 }
 
 .button-group {
-    display: flex;
-    justify-content: space-between; /* Espacio entre los botones */
-    margin-top: 10px; /* Espacio encima de los botones */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .details-button {
-    background-color: black; /* Fondo negro */
-    color: green; /* Texto verde */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: black;
+  color: green;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .buy-button {
-    background-color: green; /* Fondo verde */
-    color: white; /* Texto blanco */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ESTILOS PARA EL CARTEL DEL CARRITO */
+.cart-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 50%;
+  max-width: 600px;
+}
+
+.cart-container h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.cart-container p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.cart-item {
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cart-item h3 {
+  margin: 5px 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.cart-item p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.clear-button {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.clear-button:hover {
+  background-color: darkred;
+}
+
+.back-button {
+  background-color: gray;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.back-button:hover {
+  background-color: darkgray;
+}
+
+.details-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 50%;
+  max-width: 600px;
+}
+
+.details-container h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.details-table th, .details-table td {
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+}
+
+.details-table th {
+  background-color: green;
+}
+
+.details-close {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.details-close:hover {
+  background-color: darkred;
 }

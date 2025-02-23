@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom'; // Cambia useHistory por useNavigate
 import './Cart.css'; // Asegúrate de que este archivo CSS esté importado
-
 const CartDropdown = ({ isOpen, onClose }) => {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
   const navigate = useNavigate(); // Usa useNavigate

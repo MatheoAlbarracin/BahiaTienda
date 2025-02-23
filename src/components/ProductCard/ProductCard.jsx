@@ -2,14 +2,13 @@ import React, { useContext, useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import ConfirmModal from '../Modals/ConfirmModal';
 import DetailsModal from '../Modals/DetailsModal';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PurchaseModal from '../Modals/PurchaseModal';
-import Alert from '../Alert/Alert'; // Asegúrate de que la ruta sea correcta
-import './ProductCard.css'; // Asegúrate de que la ruta sea correcta
-import { CartContext } from '../../context/CartContext'; // Importa el contexto
-import ConfirmationMessage from '../ConfirmationMessage/ConfirmationMessage'; // Asegúrate de que la ruta sea correcta
-import Modal from '../Modal/Modal'; // Asegúrate de que la ruta sea correcta
-import DetailsProducts from '../DetailsProducts/DetailsProducts'; // Asegúrate de que la ruta sea correcta
+import Alert from '../Alert/Alert';
+import './ProductCard.css';
+import { CartContext } from '../../context/CartContext';
+import ConfirmationMessage from '../ConfirmationMessage/ConfirmationMessage';
+import DetailsProducts from '../DetailsProducts/DetailsProducts'; 
 
 const ProductCard = ({ product }) => {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
@@ -18,11 +17,10 @@ const ProductCard = ({ product }) => {
   const [isAlertOpen, setAlertOpen] = useState(false);
   const [confirmationMessage, setConfirmationMessage] = useState('');
   const navigate = useNavigate();
-  const { addToCart } = useContext(CartContext); // Usa el contexto
-  const [isDetailsOpen, setDetailsOpen] = useState(false); // Estado para el nuevo modal
+  const { addToCart } = useContext(CartContext);
+  const [isDetailsOpen, setDetailsOpen] = useState(false); 
 
   const handleBuy = () => {
-    // Redirigir a la página de proceso de compra
     navigate(`/process-buy/${product.id}`);
   };
 
@@ -33,15 +31,7 @@ const ProductCard = ({ product }) => {
   const handleAddToCart = () => {
     addToCart(product);
     setConfirmationMessage(`¡${product.name} agregado al carrito!`);
-    setTimeout(() => setConfirmationMessage(''), 3000); // Mensaje desaparece después de 3 segundos
-  };
-
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalOpen(false);
+    setTimeout(() => setConfirmationMessage(''), 3000);
   };
 
   const handleOpenDetails = () => {
@@ -86,26 +76,22 @@ const ProductCard = ({ product }) => {
 
       <PurchaseModal 
         isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
+        onClose={() => setModalOpen(false)} 
         onConfirm={handleConfirmPurchase} 
         product={product} 
       />
 
-      <Modal 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
-        title={`Detalles de ${product.name}`} 
-        content={product.details} // Asegúrate de que el objeto product tenga una propiedad 'details'
-      />
+      <ConfirmationMessage message={confirmationMessage} />
 
-      <DetailsProducts 
-        isOpen={isDetailsOpen} 
-        onClose={handleCloseDetails} 
-        title={`Detalles de ${product.name}`} 
-        content={product.details} // Asegúrate de que el objeto product tenga una propiedad 'details'
-      />
-
-      <ConfirmationMessage message={confirmationMessage} /> {/* Mostrar mensaje de confirmación */}
+      {/* Renderizar el modal de detalles usando Portals */}
+      {isDetailsOpen && (
+        <DetailsProducts 
+          isOpen={isDetailsOpen} 
+          onClose={handleCloseDetails} 
+          title={`Detalles de ${product.name}`} 
+          content={product.details} 
+        />
+      )}
     </div>
   );
 };
